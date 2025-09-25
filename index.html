@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sniff Pots - Aromaterapia Portátil | Fit Mental</title>
+    <meta name="description" content="Descubre Sniff Pots: cajitas de aromaterapia portátil con Focus, Respirus, Serenus y Noctus. Lleva contigo la calma y energía que necesitas.">
+    <meta name="keywords" content="aromaterapia portátil, sniff pots, fit mental, bienestar, aromaterapia, relajación, concentración, sueño">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sniffpot.crissteinman.com/">
+    <meta property="og:title" content="Sniff Pots - Aromaterapia Portátil">
+    <meta property="og:description" content="Cajitas aromáticas para tu bienestar diario. Focus, Respirus, Serenus y Noctus.">
+    <meta property="og:image" content="https://sniffpot.crissteinman.com/assets/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://sniffpot.crissteinman.com/">
+    <meta property="twitter:title" content="Sniff Pots - Aromaterapia Portátil">
+    <meta property="twitter:description" content="Cajitas aromáticas para tu bienestar diario">
+    <meta property="twitter:image" content="https://sniffpot.crissteinman.com/assets/twitter-card.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://sniffpot.crissteinman.com/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sage: '#A3B18A',
+                        'sage-dark': '#8B9B7A',
+                        lavender: '#B7A2CC',
+                        beige: '#FDF6EC',
+                        'deep-blue': '#264653',
+                        'deep-blue-dark': '#1a3038'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Sniff Pots Kit",
+        "description": "Kit de 4 variedades de aromaterapia portátil",
+        "brand": {
+            "@type": "Brand",
+            "name": "Fit Mental"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "650",
+            "priceCurrency": "MXN",
+            "availability": "https://schema.org/InStock"
+        }
+    }
+    </script>
+
+    <style>
+        /* Critical CSS */
+        :root {
+            --sage: #A3B18A;
+            --lavender: #B7A2CC;
+            --beige: #FDF6EC;
+            --deep-blue: #264653;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Custom animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-beige text-deep-blue">
+
+    <!-- Skip to main content (Accessibility) -->
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-deep-blue text-white px-4 py-2 rounded-lg">
+        Saltar al contenido
+    </a>
+
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 right-0 bg-beige/95 backdrop-blur-sm z-50 border-b border-sage/20">
+        <nav class="container mx-auto px-4 py-4" role="navigation" aria-label="Navegación principal">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-sage to-lavender rounded-full"></div>
+                    <span class="text-xl font-bold text-deep-blue">Sniff Pots</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="#que-son" class="hover:text-sage transition-colors">¿Qué son?</a></li>
+                    <li><a href="#productos" class="hover:text-sage transition-colors">Productos</a></li>
+                    <li><a href="#precios" class="hover:text-sage transition-colors">Precios</a></li>
+                    <li><a href="#mayoreo" class="hover:text-sage transition-colors">Mayoreo</a></li>
+                    <li><a href="#testimonios" class="hover:text-sage transition-colors">Testimonios</a></li>
+                    <li><a href="#faq" class="hover:text-sage transition-colors">FAQ</a></li>
+                </ul>
+
+                <div class="hidden md:flex items-center space-x-4">
+                    <button id="cart-btn" class="relative p-2 hover:bg-sage/10 rounded-lg transition-colors" aria-label="Carrito de compras">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                        <span id="cart-count" class="absolute -top-1 -right-1 bg-lavender text-white text-xs rounded-full w-5 h-5 flex items-center justify-center hidden">0</span>
+                    </button>
+                    <a href="https://wa.me/525618532322" target="_blank" rel="noopener" class="bg-gradient-to-r from-sage to-sage-dark text-white px-4 py-2 rounded-xl hover:shadow-lg transition-shadow">
+                        WhatsApp
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2" aria-label="Abrir menú de navegación">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <ul class="space-y-2">
+                    <li><a href="#que-son" class="block py-2 hover:text-sage">¿Qué son?</a></li>
+                    <li><a href="#productos" class="block py-2 hover:text-sage">Productos</a></li>
+                    <li><a href="#precios" class="block py-2 hover:text-sage">Precios</a></li>
+                    <li><a href="#mayoreo" class="block py-2 hover:text-sage">Mayoreo</a></li>
+                    <li><a href="#testimonios" class="block py-2 hover:text-sage">Testimonios</a></li>
+                    <li><a href="#faq" class="block py-2 hover:text-sage">FAQ</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main" role="main">
+
+        <!-- Section 1: Hero -->
+        <section class="min-h-screen flex items-center justify-center pt-20 px-4 bg-gradient-to-br from-beige via-beige to-sage/10">
+            <div class="container mx-auto max-w-6xl">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="fade-in-up">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-deep-blue">
+                            Aromaterapia portátil para cada momento de tu día.
+                        </h1>
+                        <h2 class="text-xl md:text-2xl text-deep-blue/80 mb-8">
+                            Lleva contigo la calma, la energía o el enfoque que necesitas en segundos.
+                        </h2>
+
+                        <!-- Trust badges -->
+                        <div class="flex flex-wrap gap-4 mb-8 text-sm text-deep-blue/60">
+                            <span class="flex items-center">
+                                <svg class="w-5 h-5 mr-2 text-sage" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
+                                    <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 1 1 0 000 2H6a2 2 0 100 4h2a2 2 0 100-4h-.5a1 1 0 000-2H8a2 2 0 012-2h2a2 2 0 012 2v9a2 2 0 01-2 2H6a2 2 0 01-2-2V5z" clip-rule="evenodd"></path>
+                                </svg>
+                                100% Natural
+                            </span>
+                            <span class="flex items-center">
+                                <svg class="w-5 h-5 mr-2 text-sage" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                Envío gratis
+                            </span>
+                            <span class="flex items-center">
+                                <svg class="w-5 h-5 mr-2 text-sage" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M13 7H7v6h6V7z"></path>
+                                    <path fill-rule="evenodd" d="M7 2a1 1 0 012 0v1h2V2a1 1 0 112 0v1h2a2 2 0 012 2v2h1a1 1 0 110 2h-1v2h1a1 1 0 110 2h-1v2a2 2 0 01-2 2h-2v1a1 1 0 11-2 0v-1H9v1a1 1 0 11-2 0v-1H5a2 2 0 01-2-2v-2H2a1 1 0 110-2h1V9H2a1 1 0 010-2h1V5a2 2 0 012-2h2V2z" clip-rule="evenodd"></path>
+                                </svg>
+                                Garantía
+                            </span>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="#productos" class="inline-block bg-gradient-to-r from-deep-blue to-deep-blue-dark text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-xl transition-all transform hover:-translate-y-1">
+                                Conoce las variedades
+                            </a>
+                            <a href="https://forms.gle/RxyWPJ6LzsAFKFpP8" target="_blank" rel="noopener" class="inline-block bg-white text-deep-blue px-8 py-4 rounded-2xl font-semibold border-2 border-deep-blue/20 hover:border-sage hover:shadow-lg transition-all">
+                                Registro mayorista
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-sage/20 to-lavender/20 rounded-3xl transform rotate-3"></div>
+                        <img src="assets/hero_sniffpots_1792x1024.jpg" alt="Sniff Pots - Cajitas de aromaterapia portátil" class="relative rounded-3xl shadow-2xl float-animation" loading="eager">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Qué son -->
+        <section id="que-son" class="py-20 px-4 bg-white" aria-labelledby="que-son-titulo">
+            <div class="container mx-auto max-w-4xl text-center">
+                <h2 id="que-son-titulo" class="text-3xl md:text-4xl font-bold mb-8">¿Qué son Sniff Pots?</h2>
+                <p class="text-lg md:text-xl text-deep-blue/80 mb-12">
+                    Sniff Pots son cajitas de aromaterapia diseñadas para tu estilo de vida ajetreado. Cada caja contiene perlas aromáticas con mezclas especiales que puedes llevar a cualquier lugar. Solo ábrela, inhala y disfruta los beneficios.
+                </p>
+
+                <!-- 3 Steps -->
+                <div class="grid md:grid-cols-3 gap-8 mt-16">
+                    <div class="text-center">
+                        <div class="w-24 h-24 mx-auto mb-4 bg-gradient-to-br from-sage/20 to-sage/10 rounded-2xl flex items-center justify-center">
+                            <img src="assets/icon_open_512.png" alt="Abre" class="w-12 h-12 opacity-80">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Abre</h3>
+                        <p class="text-deep-blue/70">Destapa tu Sniff Pot cuando necesites un momento de bienestar</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-24 h-24 mx-auto mb-4 bg-gradient-to-br from-lavender/20 to-lavender/10 rounded-2xl flex items-center justify-center">
+                            <img src="assets/icon_inhale_512.png" alt="Inhala" class="w-12 h-12 opacity-80">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Inhala</h3>
+                        <p class="text-deep-blue/70">Respira profundamente y permite que los aromas naturales actúen</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-24 h-24 mx-auto mb-4 bg-gradient-to-br from-deep-blue/20 to-deep-blue/10 rounded-2xl flex items-center justify-center">
+                            <img src="assets/icon_balance_512.png" alt="Equilíbrate" class="w-12 h-12 opacity-80">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Equilíbrate</h3>
+                        <p class="text-deep-blue/70">Siente cómo tu cuerpo y mente encuentran el balance perfecto</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Productos -->
+        <section id="productos" class="py-20 px-4 bg-gradient-to-br from-beige to-white" aria-labelledby="productos-titulo">
+            <div class="container mx-auto max-w-6xl">
+                <h2 id="productos-titulo" class="text-3xl md:text-4xl font-bold text-center mb-4">Nuestras Variedades</h2>
+                <p class="text-center text-deep-blue/70 mb-12">Encuentra el aroma perfecto para cada momento de tu día</p>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Focus -->
+                    <article class="product-card bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all transform hover:-translate-y-2"
+                             data-product-id="prod_Focus2024"
+                             data-price-id="price_focus"
+                             data-sku="SNIFF-FOCUS-001"
+                             data-price="250"
+                             data-price-lck="200"
+                             data-price-wholesale="150">
+                        <div class="h-48 bg-gradient-to-br from-orange-100 to-yellow-100 relative">
+                            <img src="assets/product_focus_1024.png" alt="Focus - Energizante para concentración" class="w-full h-full object-cover" loading="lazy">
+                            <span class="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-medium">Energía</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2">Focus</h3>
+                            <p class="text-deep-blue/70 mb-4">Energizante para concentración y claridad. Ideal para viajes, trabajo, exámenes y conferencias.</p>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-3xl font-bold text-deep-blue">$250</span>
+                                <span class="text-sm text-deep-blue/60 line-through">$300</span>
+                            </div>
+                            <button class="buy-btn w-full bg-gradient-to-r from-orange-400 to-yellow-400 text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-all"
+                                    data-action="purchase"
+                                    data-product-id="prod_Focus2024"
+                                    data-quantity="1"
+                                    onclick="addToCart('Focus', 250)">
+                                Comprar Focus
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Respirus -->
+                    <article class="product-card bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all transform hover:-translate-y-2"
+                             data-product-id="prod_Respirus2024"
+                             data-price-id="price_respirus"
+                             data-sku="SNIFF-RESPIRUS-001"
+                             data-price="250"
+                             data-price-lck="200"
+                             data-price-wholesale="150">
+                        <div class="h-48 bg-gradient-to-br from-blue-100 to-indigo-100 relative">
+                            <img src="assets/product_respirus_1024.png" alt="Respirus - Relajante profundo" class="w-full h-full object-cover" loading="lazy">
+                            <span class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">Relax</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2">Respirus</h3>
+                            <p class="text-deep-blue/70 mb-4">Relajante profundo para descanso y sueño reparador. Ideal para tu rutina nocturna.</p>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-3xl font-bold text-deep-blue">$250</span>
+                                <span class="text-sm text-deep-blue/60 line-through">$300</span>
+                            </div>
+                            <button class="buy-btn w-full bg-gradient-to-r from-blue-400 to-indigo-400 text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-all"
+                                    data-action="purchase"
+                                    data-product-id="prod_Respirus2024"
+                                    data-quantity="1"
+                                    onclick="addToCart('Respirus', 250)">
+                                Comprar Respirus
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Serenus -->
+                    <article class="product-card bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all transform hover:-translate-y-2"
+                             data-product-id="prod_Serenus2024"
+                             data-price-id="price_serenus"
+                             data-sku="SNIFF-SERENUS-001"
+                             data-price="250"
+                             data-price-lck="200"
+                             data-price-wholesale="150">
+                        <div class="h-48 bg-gradient-to-br from-green-100 to-emerald-100 relative">
+                            <img src="assets/product_serenus_1024.png" alt="Serenus - Alivia tensión" class="w-full h-full object-cover" loading="lazy">
+                            <span class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">Balance</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2">Serenus</h3>
+                            <p class="text-deep-blue/70 mb-4">Alivia tensión y restaura equilibrio. Ideal para días ajetreados y momentos de estrés.</p>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-3xl font-bold text-deep-blue">$250</span>
+                                <span class="text-sm text-deep-blue/60 line-through">$300</span>
+                            </div>
+                            <button class="buy-btn w-full bg-gradient-to-r from-green-400 to-emerald-400 text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-all"
+                                    data-action="purchase"
+                                    data-product-id="prod_Serenus2024"
+                                    data-quantity="1"
+                                    onclick="addToCart('Serenus', 250)">
+                                Comprar Serenus
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Noctus -->
+                    <article class="product-card bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all transform hover:-translate-y-2"
+                             data-product-id="prod_Noctus2024"
+                             data-price-id="price_noctus"
+                             data-sku="SNIFF-NOCTUS-001"
+                             data-price="250"
+                             data-price-lck="200"
+                             data-price-wholesale="150">
+                        <div class="h-48 bg-gradient-to-br from-purple-100 to-indigo-100 relative">
+                            <img src="assets/product_noctus_1024.png" alt="Noctus - Facilita el sueño" class="w-full h-full object-cover" loading="lazy">
+                            <span class="absolute top-4 right-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium">Sueño</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2">Noctus</h3>
+                            <p class="text-deep-blue/70 mb-4">Facilita el sueño, calma y reconforta. Ideal para viajes o el hogar.</p>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-3xl font-bold text-deep-blue">$250</span>
+                                <span class="text-sm text-deep-blue/60 line-through">$300</span>
+                            </div>
+                            <button class="buy-btn w-full bg-gradient-to-r from-purple-400 to-indigo-400 text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-all"
+                                    data-action="purchase"
+                                    data-product-id="prod_Noctus2024"
+                                    data-quantity="1"
+                                    onclick="addToCart('Noctus', 250)">
+                                Comprar Noctus
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Kit Especial (Destacado) -->
+                    <article class="product-card bg-gradient-to-br from-white to-lavender/5 rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all transform hover:-translate-y-2 md:col-span-2 lg:col-span-2 border-2 border-lavender/30"
+                             data-product-id="prod_Kit2024"
+                             data-price-id="price_kit"
+                             data-sku="SNIFF-KIT-001"
+                             data-price="800"
+                             data-price-lck="650"
+                             data-price-wholesale="600">
+                        <div class="md:flex">
+                            <div class="md:w-1/2 h-64 md:h-auto bg-gradient-to-br from-lavender/20 to-sage/20 relative">
+                                <img src="assets/product_kit_1024.png" alt="Kit 4 variedades - Oferta especial" class="w-full h-full object-cover" loading="lazy">
+                                <span class="absolute top-4 right-4 bg-gradient-to-r from-lavender to-sage text-white px-4 py-2 rounded-full text-sm font-bold">OFERTA ESPECIAL</span>
+                            </div>
+                            <div class="md:w-1/2 p-8">
+                                <h3 class="text-3xl font-bold mb-3">Kit 4 Variedades</h3>
+                                <p class="text-deep-blue/70 mb-4">Las cuatro variedades en un solo set a precio especial. Incluye Focus, Respirus, Serenus y Noctus.</p>
+                                <ul class="space-y-2 mb-6">
+                                    <li class="flex items-center text-deep-blue/70">
+                                        <svg class="w-5 h-5 mr-2 text-sage" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        Ahorra $200 vs compra individual
+                                    </li>
+                                    <li class="flex items-center text-deep-blue/70">
+                                        <svg class="w-5 h-5 mr-2 text-sage" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        Caja de regalo premium incluida
+                                    </li>
+                                    <li class="flex items-center text-deep-blue/70">
+                                        <svg class="w-5 h-5 mr-2 text-sage" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        Envío gratis y prioritario
+                                    </li>
+                                </ul>
+                                <div class="flex items-center justify-between mb-6">
+                                    <div>
+                                        <span class="text-4xl font-bold text-deep-blue">$800</span>
+                                        <span class="text-lg text-deep-blue/60 line-through ml-2">$1,000</span>
+                                    </div>
+                                    <span class="bg-gradient-to-r from-lavender to-sage text-white px-3 py-1 rounded-full text-sm font-bold">20% OFF</span>
+                                </div>
+                                <button class="buy-btn w-full bg-gradient-to-r from-lavender to-sage text-white py-4 rounded-xl font-bold text-lg hover:shadow-xl transition-all transform hover:scale-105"
+                                        data-action="purchase"
+                                        data-product-id="prod_Kit2024"
+                                        data-quantity="1"
+                                        onclick="addToCart('Kit 4 Variedades', 800)">
+                                    Comprar Kit Completo
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Precios -->
+        <section id="precios" class="py-20 px-4 bg-white" aria-labelledby="precios-titulo">
+            <div class="container mx-auto max-w-4xl">
+                <h2 id="precios-titulo" class="text-3xl md:text-4xl font-bold text-center mb-4">Precios y Ofertas</h2>
+                <p class="text-center text-deep-blue/70 mb-12">Elige el plan que mejor se adapte a tus necesidades</p>
+
+                <div class="overflow-x-auto mb-12">
+                    <table class="w-full bg-white rounded-2xl shadow-lg overflow-hidden">
+                        <thead>
+                            <tr class="bg-gradient-to-r from-sage to-lavender text-white">
+                                <th class="px-6 py-4 text-left">Producto</th>
+                                <th class="px-6 py-4 text-center">Precio normal</th>
+                                <th class="px-6 py-4 text-center">Precio LCK</th>
+                                <th class="px-6 py-4 text-center">Mayoreo</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr class="hover:bg-beige/20 transition-colors">
+                                <td class="px-6 py-4 font-medium">Caja individual</td>
+                                <td class="px-6 py-4 text-center">$250</td>
+                                <td class="px-6 py-4 text-center text-sage font-semibold">$200</td>
+                                <td class="px-6 py-4 text-center text-deep-blue font-bold">$150</td>
+                            </tr>
+                            <tr class="hover:bg-beige/20 transition-colors">
+                                <td class="px-6 py-4 font-medium">Kit 4 variedades</td>
+                                <td class="px-6 py-4 text-center">$800</td>
+                                <td class="px-6 py-4 text-center text-sage font-semibold">$650</td>
+                                <td class="px-6 py-4 text-center text-gray-400">—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="bg-gradient-to-r from-deep-blue to-deep-blue-dark text-white px-8 py-3 rounded-xl font-semibold hover:shadow-lg transition-all"
+                            onclick="scrollToProducts()">
+                        Comprar individual
+                    </button>
+                    <button class="bg-gradient-to-r from-lavender to-sage text-white px-8 py-3 rounded-xl font-semibold hover:shadow-lg transition-all"
+                            onclick="scrollToProducts()">
+                        Comprar kit
+                    </button>
+                    <a href="https://forms.gle/RxyWPJ6LzsAFKFpP8" target="_blank" rel="noopener"
+                       class="bg-white text-deep-blue px-8 py-3 rounded-xl font-semibold border-2 border-deep-blue/20 hover:border-sage hover:shadow-lg transition-all text-center">
+                        Registro a mayoreo
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Registro Mayorista -->
+        <section id="mayoreo" class="py-20 px-4 bg-gradient-to-br from-sage/10 to-lavender/10" aria-labelledby="mayoreo-titulo">
+            <div class="container mx-auto max-w-4xl text-center">
+                <h2 id="mayoreo-titulo" class="text-3xl md:text-4xl font-bold mb-8">Conviértete en Distribuidor</h2>
+                <p class="text-lg text-deep-blue/80 mb-12">
+                    Únete a nuestra red de mayoristas y obtén beneficios exclusivos para hacer crecer tu negocio.
+                </p>
+
+                <div class="grid md:grid-cols-3 gap-6 mb-12">
+                    <div class="bg-white rounded-2xl p-6">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-sage to-sage-dark rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"></path>
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Precio Preferencial</h3>
+                        <p class="text-deep-blue/70">Acceso a precio exclusivo de $150 por caja</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-lavender to-lavender rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
+                                <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 1 1 0 000 2H6a2 2 0 100 4h2a2 2 0 100-4h-.5a1 1 0 000-2H8a2 2 0 012-2h2a2 2 0 012 2v9a2 2 0 01-2 2H6a2 2 0 01-2-2V5z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Compras por Volumen</h3>
+                        <p class="text-deep-blue/70">Disponibilidad prioritaria para pedidos grandes</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-deep-blue to-deep-blue-dark rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Soporte de Materiales</h3>
+                        <p class="text-deep-blue/70">Material POP para tu punto de venta</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 max-w-2xl mx-auto shadow-xl">
+                    <h3 class="text-2xl font-bold mb-4">Beneficios del programa mayorista</h3>
+                    <ul class="text-left space-y-3 mb-6 max-w-md mx-auto">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 mr-2 text-sage mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Acceso a precio preferencial ($150 por caja)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 mr-2 text-sage mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Compras por volumen con disponibilidad prioritaria</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 mr-2 text-sage mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Soporte de materiales para tu punto de venta</span>
+                        </li>
+                    </ul>
+                    <a href="https://forms.gle/RxyWPJ6LzsAFKFpP8" target="_blank" rel="noopener"
+                       class="inline-block bg-gradient-to-r from-deep-blue to-deep-blue-dark text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-xl transition-all transform hover:-translate-y-1"
+                       data-action="wholesale-registration"
+                       data-fee-amount="500"
+                       data-fee-product="wholesale-fee">
+                        Registrarme como mayorista
+                    </a>
+                    <p class="text-sm text-deep-blue/60 mt-4">
+                        ¿Tienes preguntas? Contáctanos por
+                        <a href="https://wa.me/525618532322" class="text-sage hover:underline">WhatsApp</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Testimonios -->
+        <section id="testimonios" class="py-20 px-4 bg-white" aria-labelledby="testimonios-titulo">
+            <div class="container mx-auto max-w-5xl">
+                <h2 id="testimonios-titulo" class="text-3xl md:text-4xl font-bold text-center mb-12">Lo que dicen nuestros clientes</h2>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-gradient-to-br from-beige to-white rounded-3xl p-6 shadow-lg">
+                        <div class="flex mb-4">
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                        </div>
+                        <p class="text-deep-blue/80 mb-4">"Me ayudó a concentrarme antes de mis exámenes."</p>
+                        <p class="font-semibold">— Estudiante</p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-beige to-white rounded-3xl p-6 shadow-lg">
+                        <div class="flex mb-4">
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                        </div>
+                        <p class="text-deep-blue/80 mb-4">"Mi pausa de calma en días pesados."</p>
+                        <p class="font-semibold">— Ejecutiva</p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-beige to-white rounded-3xl p-6 shadow-lg">
+                        <div class="flex mb-4">
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                        </div>
+                        <p class="text-deep-blue/80 mb-4">"Ideal para viajes; me relaja en avión."</p>
+                        <p class="font-semibold">— Viajero frecuente</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: FAQ -->
+        <section id="faq" class="py-20 px-4 bg-gradient-to-br from-white to-beige" aria-labelledby="faq-titulo">
+            <div class="container mx-auto max-w-3xl">
+                <h2 id="faq-titulo" class="text-3xl md:text-4xl font-bold text-center mb-12">Preguntas Frecuentes</h2>
+
+                <div class="space-y-4">
+                    <div class="faq-item bg-white rounded-2xl shadow-md overflow-hidden">
+                        <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-beige/20 transition-colors" onclick="toggleFAQ(this)">
+                            <span class="font-semibold">¿Cuánto dura un Sniff Pot?</span>
+                            <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-4">
+                            <p class="text-deep-blue/70">Cada Sniff Pot está diseñado para durar aproximadamente 3-4 meses con uso regular (3-4 veces al día). La duración puede variar según la frecuencia de uso y las condiciones de almacenamiento.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white rounded-2xl shadow-md overflow-hidden">
+                        <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-beige/20 transition-colors" onclick="toggleFAQ(this)">
+                            <span class="font-semibold">¿Es seguro para niños?</span>
+                            <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-4">
+                            <p class="text-deep-blue/70">Sniff Pots está formulado con ingredientes 100% naturales y es seguro para niños mayores de 6 años bajo supervisión adulta. Para niños menores, recomendamos consultar con un pediatra antes de usar.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white rounded-2xl shadow-md overflow-hidden">
+                        <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-beige/20 transition-colors" onclick="toggleFAQ(this)">
+                            <span class="font-semibold">¿Se puede llevar en avión?</span>
+                            <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-4">
+                            <p class="text-deep-blue/70">Sí, Sniff Pots es completamente seguro para llevar en aviones. Al ser un producto sólido (perlas aromáticas), no está sujeto a las restricciones de líquidos y puede llevarse tanto en equipaje de mano como documentado.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white rounded-2xl shadow-md overflow-hidden">
+                        <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-beige/20 transition-colors" onclick="toggleFAQ(this)">
+                            <span class="font-semibold">¿Cómo usarlo correctamente?</span>
+                            <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-4">
+                            <p class="text-deep-blue/70">Simplemente abre la cajita, acércala a tu nariz a unos 5-10 cm de distancia, e inhala suavemente durante 3-5 segundos. Repite 2-3 veces según necesites. Cierra bien la cajita después de usar para preservar el aroma.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-deep-blue text-white py-12 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-sage to-lavender rounded-full"></div>
+                        <span class="text-xl font-bold">Sniff Pots</span>
+                    </div>
+                    <p class="text-white/80 text-sm">Por Fit Mental</p>
+                    <p class="text-white/60 text-sm mt-2">Aromaterapia portátil para tu bienestar diario</p>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Enlaces rápidos</h4>
+                    <ul class="space-y-2 text-white/80">
+                        <li><a href="#productos" class="hover:text-sage transition-colors">Productos</a></li>
+                        <li><a href="#precios" class="hover:text-sage transition-colors">Precios</a></li>
+                        <li><a href="#mayoreo" class="hover:text-sage transition-colors">Mayoreo</a></li>
+                        <li><a href="#faq" class="hover:text-sage transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-white/80">
+                        <li><a href="#" class="hover:text-sage transition-colors">Términos y condiciones</a></li>
+                        <li><a href="#" class="hover:text-sage transition-colors">Política de privacidad</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Contacto</h4>
+                    <ul class="space-y-2 text-white/80">
+                        <li>
+                            <a href="https://wa.me/525618532322" target="_blank" rel="noopener" class="flex items-center hover:text-sage transition-colors">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path>
+                                </svg>
+                                WhatsApp
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:gerentecomercial@lck.com.mx" class="flex items-center hover:text-sage transition-colors">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                Email
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="flex space-x-4 mt-4">
+                        <a href="https://crissteinman.com" target="_blank" rel="noopener" class="text-white/60 hover:text-sage transition-colors">
+                            Sitio madre
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/20 pt-8 text-center text-white/60 text-sm">
+                <p>&copy; 2024 Sniff Pots by Fit Mental. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart notification -->
+    <div id="cart-notification" class="fixed bottom-4 right-4 bg-gradient-to-r from-sage to-lavender text-white px-6 py-3 rounded-2xl shadow-xl transform translate-y-20 opacity-0 transition-all z-50">
+        <span id="cart-message"></span>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+
+        // FAQ accordion
+        function toggleFAQ(button) {
+            const answer = button.nextElementSibling;
+            const icon = button.querySelector('svg');
+
+            answer.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
+        // Shopping cart functionality
+        let cart = [];
+
+        function addToCart(productName, price) {
+            cart.push({ name: productName, price: price });
+            updateCartUI();
+            showNotification(`${productName} agregado al carrito`);
+
+            // Placeholder for Stripe integration
+            console.log('Product added to cart:', productName, price);
+            // In v2, this will trigger Stripe checkout
+        }
+
+        function updateCartUI() {
+            const cartCount = document.getElementById('cart-count');
+            if (cart.length > 0) {
+                cartCount.textContent = cart.length;
+                cartCount.classList.remove('hidden');
+            } else {
+                cartCount.classList.add('hidden');
+            }
+        }
+
+        function showNotification(message) {
+            const notification = document.getElementById('cart-notification');
+            const messageEl = document.getElementById('cart-message');
+
+            messageEl.textContent = message;
+            notification.style.transform = 'translateY(0)';
+            notification.style.opacity = '1';
+
+            setTimeout(() => {
+                notification.style.transform = 'translateY(20px)';
+                notification.style.opacity = '0';
+            }, 3000);
+        }
+
+        // Scroll to products helper
+        function scrollToProducts() {
+            document.getElementById('productos').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Stripe placeholder manager
+        class StripeManager {
+            constructor() {
+                this.publicKey = null;
+                this.products = this.loadProducts();
+            }
+
+            loadProducts() {
+                return Array.from(document.querySelectorAll('[data-product-id]'))
+                    .map(el => ({
+                        id: el.dataset.productId,
+                        priceId: el.dataset.priceId,
+                        sku: el.dataset.sku,
+                        prices: {
+                            regular: el.dataset.price,
+                            lck: el.dataset.priceLck,
+                            wholesale: el.dataset.priceWholesale
+                        }
+                    }));
+            }
+
+            async handlePurchase(productId, quantity = 1) {
+                // v1: Show coming soon message
+                alert('Compras en línea próximamente. Contáctanos por WhatsApp.');
+                window.open('https://wa.me/525618532322', '_blank');
+
+                // v2: Will integrate Stripe Checkout
+                // const stripe = Stripe(this.publicKey);
+                // const {error} = await stripe.redirectToCheckout({...});
+            }
+        }
+
+        // Initialize Stripe manager
+        const stripeManager = new StripeManager();
+    </script>
+</body>
+</html>
